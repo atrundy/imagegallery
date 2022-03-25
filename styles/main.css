@@ -1,19 +1,33 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+  }
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  html{
+    background-image: url("../images/backgroundimage.jpg");
+    background-attachment: fixed;
   }
   body {
     margin: 0;
     font-family: Arial;
-    background-image: url(../images/backgroundimage.jpg);
-    background-attachment: fixed;
+
+    
   }
   header{
+      background-image: url("../images/vhbackground.jpg");
+      border-bottom: 3px ridge silver;
       text-align: center;
       background-color: silver;
-      background-color: ;
-  }
+      }
   header h2 {
-   font-size: 200%;
+   font-size: 300%;
+   font-variant: small-caps;
+
   }
   header h3{
       font-size: 150%;
@@ -21,7 +35,7 @@
   main h1{
       font-weight: bold;
       color: silver;
-
+      text-align: center;
   }
   .row {
     display: flex;
@@ -37,13 +51,26 @@
   }
   
   .column img {
+    flex-basis: 1;
+    width: 100%;
     max-width: 400px;
     margin-top: 8px;
     vertical-align: middle;
     border-radius: 5px;
     border: 3px outset white;
   }
-  
+  footer {
+    padding: 30px 0;
+    border-top: 3px ridge black;
+    background-color: silver;
+  }
+  footer p {
+    text-align: center;
+    font-size: 80%;
+    font-variant: small-caps;
+    font-weight: bold;
+    color:black;
+  } 
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media (max-width: 800px) {
     .column {
